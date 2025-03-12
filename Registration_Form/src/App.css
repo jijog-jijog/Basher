@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Space Background */
+body {
+  background: url('https://source.unsplash.com/1600x900/?space,stars') no-repeat center center fixed;
+  background-size: cover;
+}
+
+/* Floating Skeleton Structures */
+.floating-structure {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  opacity: 0.3;
+  animation: floatStructure 10s infinite ease-in-out alternate;
+}
+
+.floating-structure:nth-child(1) {
+  top: 10%;
+  left: 15%;
+  animation-duration: 12s;
+}
+
+.floating-structure:nth-child(2) {
+  top: 30%;
+  right: 10%;
+  animation-duration: 14s;
+}
+
+.floating-structure:nth-child(3) {
+  bottom: 20%;
+  left: 40%;
+  animation-duration: 16s;
+}
+
+.floating-structure:nth-child(4) {
+  bottom: 10%;
+  right: 30%;
+  animation-duration: 18s;
+}
+
+/* Floating Animation */
+@keyframes floatStructure {
+  0% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  100% {
+    transform: translateY(20px) rotate(10deg);
+  }
+}
